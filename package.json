@@ -8,7 +8,12 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.6.5",
+    "@vue/apollo-composable": "^4.0.0-alpha.17",
     "core-js": "^3.8.3",
+    "graphql": "^16.5.0",
+    "graphql-tag": "^2.12.6",
+    "nomics": "^0.5.7",
     "vue": "^3.2.13"
   },
   "devDependencies": {
