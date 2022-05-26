@@ -1,6 +1,7 @@
 import { createApp, provide, h } from 'vue'
 import { DefaultApolloClient } from "@vue/apollo-composable";
-import { ApolloClient, InMemoryCache } from "@apollo/client";
+import {ApolloClient, InMemoryCache} from "@apollo/client/core";
+
 import App from './App.vue'
 
 // https://www.apollographql.com/docs/react/caching/overview/
@@ -10,7 +11,7 @@ const cache = new InMemoryCache()
 
 const apolloClient = new ApolloClient({
     cache,
-    uri: '<https://rickandmortyapi.com/graphql>',
+    uri: '/api',
 })
 
 const app = createApp({

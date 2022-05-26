@@ -1,12 +1,12 @@
 // nomics javascript client will be used to fetch data - https://www.npmjs.com/package/nomics
 import Nomics from 'nomics'
 
-const nomics = Nomics({
+const nomics = new Nomics({
     // environment variable from vue.config.js passed to nomics client
     apiKey: process.env.API_KEY
 })
 
-export const resolvers = {
+const resolvers = {
     Query: {
         // initial coin data fetch
         getCoins: async (_, args) => {
@@ -26,3 +26,5 @@ export const resolvers = {
         }
     }
 }
+
+export default resolvers
